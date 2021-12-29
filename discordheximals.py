@@ -2975,3 +2975,6 @@ class Color:
             cls,
             random.choice([attr for attr in cls.__dict__ if not attr.startswith("_")]),
         )()
+    
+Colour = Color()
+
