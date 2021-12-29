@@ -1,5 +1,7 @@
-class Color:
+import random
 
+
+class Color:
     @staticmethod
     def air_force_blue() -> int:
         return 0x5d8aa8
@@ -2967,3 +2969,7 @@ class Color:
     @staticmethod
     def zinnwalditebrown() -> int:
         return 0x2c1608
+    
+    @classmethod
+    def random(cls) -> int:
+        return getattr(cls, random.choice([attr for attr in cls.__dict__ if not attr.startswith("_")]))()
