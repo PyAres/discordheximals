@@ -1,4 +1,4 @@
-#example
+# example
 import discordheximals
 
 
@@ -8,5 +8,6 @@ async def command(ctx):
         title="title",
         description="description",
         color=discordheximals.Color.air_force_blue(),
-        timestamp=datetime.datetime.utcnow())
+        timestamp=datetime.datetime.utcnow(),
+    )
     await ctx.send(embed=embed)
